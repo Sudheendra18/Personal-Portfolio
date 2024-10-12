@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --dark-brown: #211306;
+    --deep-red: #510000;
+    --rose: #9B2E41;
+    --light-beige: #E3CBBF;
+    --warm-beige: #BEA18E;
+}
+
+body {
+    background-color: var(--light-beige);
+    color: var(--dark-brown);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--dark-brown);
+    color: var(--light-beige);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--light-beige);
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--warm-beige);
+}
+
+.hero {
+    background-color: var(--deep-red);
+    color: var(--light-beige);
+    padding: 100px 0 50px 0;
+    text-align: center;
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.about {
+    padding: 4rem 0;
+    background-color: var(--light-beige);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid var(--rose);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    h3{
+        color: var(--deep-red);
+        margin-bottom: 1rem;
+    }
+}
+
+.skills {
+    padding: 4rem 0;
+    background-color: var(--warm-beige);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--light-beige);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    h3{
+        color: var(--deep-red);
+        margin: 1rem 0;
+    }
+}
+
+
+.projects {
+    padding: 4rem 0;
+    background-color: var(--light-beige);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit:contain;
+    display: flex;
+    flex-direction: row;
+    position:static;
+}
+
+.project-info {
+    text-align: center;
+    padding: 1.5rem;
+    h3{
+    color: var(--deep-red);
+    margin-bottom: 0.5rem;
+    }
+}
+
+.contact {
+    padding: 4rem 0;
+    background-color: var(--dark-brown);
+    color: var(--light-beige);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--deep-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-beige);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    background-color: var(--rose);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--deep-red);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.social-logo {
+    width: 50px; 
+    height: 50px;
+    background-color: var(--light-beige);
+    padding: 10px;
+    border-radius:50%;
+    transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+    transform: translateY(-5px);
+}
+
+.social-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 2rem;
+    }
+    
+    .social-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
